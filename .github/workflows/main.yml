@@ -167,7 +167,7 @@ jobs:
           context: ./gateway/
           push: true
           tags: axeunder/taski_gateway:latest
-deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs:
       # Дождёмся билда всех образов Taski
