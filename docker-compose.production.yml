@@ -11,7 +11,7 @@ services:
     image: postgres:13.10
     env_file: .env
     volumes:
-      - pg_data_production:/var/lib/postgresql/data
+      - pg_data_production:/var/lib/postgresql/data/
   backend:
     image: axeunder/taski_backend
     env_file: .env
@@ -22,7 +22,7 @@ services:
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static_volume:/frontend_static
+      - static_volume:/frontend_static/
   gateway:
     image: axeunder/taski_gateway  # Качаем с Docker Hub
     env_file: .env
