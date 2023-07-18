@@ -16,7 +16,7 @@ services:
     image: axeunder/taski_backend
     env_file: .env
     volumes:
-      - static_volume:/backend_static
+      - static_volume:/backend_static/
   frontend:
     image: axeunder/taski_frontend  # Качаем с Docker Hub
     env_file: .env
